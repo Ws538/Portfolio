@@ -9,12 +9,13 @@ var tl = gsap.timeline({ defaults: { ease: "Expo.easeInOut" } });
 tl.from('.char', {
   y: -100,
   stagger: 0.05,
-  delay: 4
+  delay: 4,
+  duration: 2
 })
 .from('.char2', {
   y: -100,
   stagger: 0.05,
-  duration: .6
+  duration: 2
 }, "-=1.2");
 
 //blob follows the mouse
