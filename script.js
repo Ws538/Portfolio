@@ -33,17 +33,26 @@ document.body.onpointermove = event => {
 }
 
 //init annimation fades out after 7 seconds
-const iframe = document.querySelector('iframe');
-setTimeout(() => {
+async function animate() {
+  const iframe = document.querySelector('iframe');
+  const downArrow = document.getElementById('downArrowId');
+  const avatar = document.querySelector('.avatar')
+
+  await new Promise(resolve => setTimeout(resolve, 5000));
   iframe.style.transition = 'opacity 2s';
   iframe.style.opacity = '0';
-}, 7000);
 
-const downArrow = document.getElementById('downArrowId');
-setTimeout(() => {
+  await new Promise(resolve => setTimeout(resolve, 1000));
   downArrow.style.transition = 'opacity 2s';
   downArrow.style.opacity = '1';
-}, 6000);
+  avatar.style.transition = 'opacity 1s';
+  avatar.style.opacity = '1';
+
+
+
+}
+
+animate();
 
 
 
