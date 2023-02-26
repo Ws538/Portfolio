@@ -9,7 +9,7 @@ var tl = gsap.timeline({ defaults: { ease: "Expo.easeInOut" } });
 tl.from('.char', {
   y: -100,
   stagger: 0.05,
-  delay: 2
+  delay: 4
 })
 .from('.char2', {
   y: -100,
@@ -33,20 +33,18 @@ document.body.onpointermove = event => {
 //init annimation fades out after 7 seconds
 async function animate() {
   const iframe = document.querySelector('iframe');
-  const downArrow = document.getElementById('downArrowId');
-  const avatar = document.querySelector('.avatar')
+  const avatar = document.querySelector('#avatar')
+  const menuButton = document.querySelector('.headerButton')
 
-  await new Promise(resolve => setTimeout(resolve, 5000));
+  await new Promise(resolve => setTimeout(resolve, 8000));
   iframe.style.transition = 'opacity 2s';
   iframe.style.opacity = '0';
 //arrow and avatar comes into screen
   await new Promise(resolve => setTimeout(resolve, 1000));
-  downArrow.style.transition = 'opacity 2s';
-  downArrow.style.opacity = '1';
   avatar.style.transition = 'opacity 1s';
   avatar.style.opacity = '1';
-
-
+  menuButton.style.transition = 'opacity 1s';
+  menuButton.style.opacity = '1';
 
 }
 
