@@ -9,8 +9,8 @@ var tl = gsap.timeline({ defaults: { ease: "Expo.easeInOut" } });
 tl.from('.char', {
   y: -100,
   stagger: 0.05,
-  delay: 4,
-  duration: 2
+  delay: 3,
+  duration: 1.5
 })
 .from('.char2', {
   y: -100,
@@ -37,7 +37,7 @@ async function animate() {
   const avatar = document.querySelector('#avatar')
   const menuButton = document.querySelector('.headerButton')
 
-  await new Promise(resolve => setTimeout(resolve, 8000));
+  await new Promise(resolve => setTimeout(resolve, 7000));
   iframe.style.transition = 'opacity 2s';
   iframe.style.opacity = '0';
 //arrow and avatar comes into screen
