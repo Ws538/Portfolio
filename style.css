@@ -50,7 +50,7 @@ body {
     width: 100%;
     margin-right:auto;
     position: absolute;
-    z-index: 0;
+    z-index: 3;
     top: 0;
     right: 0;
     pointer-events: none;
@@ -60,8 +60,13 @@ body {
 .avatar {
   height: 30rem;
   opacity: 0;
-  z-index: 0;
+  z-index: 3;
   pointer-events: none;
+  position: absolute;
+}
+
+#avatar:hover {
+  cursor: pointer;
 }
 
 h1 {
@@ -75,12 +80,14 @@ p {
     font-size: 1.6rem;
     font-weight: 300;
     margin: 0;
+
 }
 
 h1,p {
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    z-index: 1;
+    z-index: 3;
+    position: relative;
     
 }
 
@@ -89,9 +96,7 @@ h1,p {
       rotate: 0deg;
     }
     
-    50% {
-      scale: 1 1.5;
-    }
+
     
     to {
       rotate: 360deg;
@@ -103,7 +108,7 @@ h1,p {
       transform: scale(1);
     }
     50% {
-      transform: scale(1.1);
+      transform: scale(1.3);
     }
     100% {
       transform: scale(1);
@@ -119,10 +124,11 @@ h1,p {
     left: 50%;
     top: 50%;
     translate: -50% -50%;
-    background: linear-gradient(to right, rgb(135, 18, 203) 0%, rgb(6, 232, 232) 45%, mediumpurple 55%, mediumpurple 100%);
-    animation: rotate 40s infinite, scale-animation 18s ease-in-out infinite;
+    background: linear-gradient(to right, rgb(135, 18, 203) 0%, rgb(135, 18, 203) 25%, rgb(6, 79, 237) 50%, rgb(135, 18, 203) 75%, rgb(135, 18, 203) 100%);
+    animation: rotate 40s infinite, scale-animation 12s ease-in-out infinite;
     opacity: 0.7;
     z-index: 1;
+    border-radius: 50%;
     filter:blur(200px)
   }
 
@@ -132,7 +138,6 @@ h1,p {
     display: flex;
     justify-content: center;
     height: 20em;
-    z-index: 0;
     
 }
 
@@ -140,5 +145,6 @@ h1,p {
     width: 9em;
     height: 23em;
     opacity: 0;
-    color: mediumpurple
+    color: mediumpurple;
+    z-index: 1;
 }

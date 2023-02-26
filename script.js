@@ -15,16 +15,14 @@ tl.from('.char', {
   y: -100,
   stagger: 0.05,
   duration: .6
-}, "-=1.2")
-;
+}, "-=1.2");
 
 //blob follows the mouse
 const blob = document.getElementById("blob");
 document.body.onpointermove = event => { 
   const { clientX, clientY } = event;
-  const { scrollTop, scrollLeft } = document.documentElement;
-  const x = clientX + scrollLeft;
-  const y = clientY + scrollTop;
+  const x = clientX 
+  const y = clientY 
   
   blob.animate({
     left: `${x}px`,
@@ -41,7 +39,7 @@ async function animate() {
   await new Promise(resolve => setTimeout(resolve, 5000));
   iframe.style.transition = 'opacity 2s';
   iframe.style.opacity = '0';
-
+//arrow and avatar comes into screen
   await new Promise(resolve => setTimeout(resolve, 1000));
   downArrow.style.transition = 'opacity 2s';
   downArrow.style.opacity = '1';
