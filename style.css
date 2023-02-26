@@ -65,8 +65,20 @@ body {
   position: absolute;
 }
 
+#avatar {
+  width: 20%;
+  border-style: dotted;
+  color: white;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  margin-left: 39%;
+
+}
+
 #avatar:hover {
   cursor: pointer;
+  background-color: white;
 }
 
 h1 {
