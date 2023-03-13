@@ -1,19 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap");
 
-::-webkit-scrollbar {
-  background-color: #000;
-  width: 6px;
-  opacity: 0;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: mediumpurple;
-}
 
 /* header */
 header {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  align-items: end;
 }
 
 .headerButton {
@@ -24,14 +16,73 @@ header {
   background-color: rgb(163, 116, 255);
   border: none;
   text-decoration: none;
-  z-index: 3;
-  opacity: 0;
+  z-index: 4;
+  scale: 0.9;
 }
 .headerButton:hover {
   cursor: pointer;
-  background-color: rgb(104, 13, 231);
-  transform: scale(1.15);
+  scale: 1;
 }
+
+.headerButton::after {
+  background-color: rgb(104, 13, 231);
+}
+
+
+
+#nav-links {
+  position: fixed;
+  top: 0rem;
+  right: 0.5rem;
+  z-index: 3;
+  list-style-type: none;
+  background-color: rgb(163, 116, 255);
+  height: 24rem;
+  width: 14rem;
+  padding: 0;
+  border-radius: 63px;
+  clip-path: circle(100px at 90% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+  transition: all 1s ease-out;
+}
+
+#nav-links.open {
+  clip-path: circle(50px at 106% -6%);
+  -webkit-clip-path: circle(500px at 90% -10%);
+}
+
+
+
+#nav-links > li {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+#nav-links > li > a:hover {
+  scale: 1.1;
+}
+
+#nav-links > li:first-child {
+  margin-top: 3rem;
+}
+
+
+#nav-links > li > a {
+  color: black;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.links-container {
+  background-color: white;
+  z-index: 2;
+  height: 10rem;
+  width: 2rem;
+}
+
 
 /* body */
 body {
@@ -39,8 +90,9 @@ body {
   font-family: "Poppins", "sans-serif";
   background-color: black;
   color: white;
-  height: 100%;
+  height: 100vh;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 /* Initial animation on start up */
@@ -72,7 +124,7 @@ body {
 }
 
 h1 {
-  font-family: Geneva, ;
+  font-family: Geneva;
   font-size: 5rem;
   margin-top: 0.8em;
   margin-bottom: 0.3em;
@@ -137,4 +189,80 @@ p {
   z-index: 1;
   border-radius: 50%;
   filter: blur(200px);
+}
+
+/* About me Page */
+
+
+
+.about-me-container, .appearing-text-container {
+  display: flex;
+  justify-content: center;
+}
+
+#about-me-text, #appearing-text {
+  width: 41rem;
+}
+
+.continueButton {
+  background: none;
+  border: none;
+  color: rgb(163, 116, 255);
+  padding: 0;
+  margin-left: 1rem ;
+  scale: 2;
+  z-index: 3;
+  position: relative;
+}
+
+.continueButton:hover {
+  cursor: pointer;
+  color: rgb(104, 13, 231);
+}
+
+.appearing-text-container {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.appearing-text-container.visible {
+  opacity: 1;
+}
+
+/* porject page */
+
+
+
+ .openChat-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#openChat-img {
+  height: 37vh;
+  display: flex;
+  position: relative;
+  width: 35%;
+  margin-left: 7rem;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.chatBox-text-container {
+  display: flex;
+  width: 51rem;
+  justify-content: center;
+  z-index: 2;
+  
+}
+
+.chatBox-text {
+  width: 75%;
+  cursor: default;
+}
+
+.chatBoxLink {
+  text-decoration: none;
+  color: rgb(163, 116, 255);
 }

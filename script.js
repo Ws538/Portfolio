@@ -37,19 +37,24 @@ async function animate() {
   const avatar = document.querySelector('#avatar')
   const menuButton = document.querySelector('.headerButton')
 
-  await new Promise(resolve => setTimeout(resolve, 7000));
-  iframe.style.transition = 'opacity 2s';
+  await new Promise(resolve => setTimeout(resolve, 6000));
+  iframe.style.transition = 'opacity 1s';
   iframe.style.opacity = '0';
 //arrow and avatar comes into screen
   await new Promise(resolve => setTimeout(resolve, 1000));
   avatar.style.transition = 'opacity 1s';
   avatar.style.opacity = '1';
-  menuButton.style.transition = 'opacity 1s';
-  menuButton.style.opacity = '1';
-
 }
-
 animate();
+
+const headerButton = document.querySelector(".headerButton");
+const navLinksContainer = document.querySelector("#links-container")
+const navLinks = document.querySelector("#nav-links")
+headerButton.addEventListener("click", () => { 
+  navLinks.classList.toggle("open");
+})
+
+
 
 
 

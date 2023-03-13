@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>William Su</title>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
   </head>
   <body>
     <header>
@@ -27,8 +27,8 @@
       </button>
       <div id="links-container">
         <ul id="nav-links">
-          <li><a href="/lib/html/aboutMe.html"> About Me </a></li>
-          <li><a href="/lib/html/projects.html"> Projects </a></li>
+          <li><a href="/index.html"> Home </a></li>
+          <li><a href="projects.html"> Projects </a></li>
           <li><a href="#"> Contact </a></li>
         </ul>
       </div>
@@ -36,30 +36,32 @@
 
     <div id="blob"></div>
 
-    <section>
-      <h1>William Su</h1>
-      <p>Full Stack Web Developer</p>
-    </section>
+    <div>
+      <h1 id="aboutMe">About Me</h1>
+    </div>
 
-    <iframe
-      class="init-iframe"
-      src="https://my.spline.design/untitled-fc5d7ff30212d410d22a647d39052f5b/"
-      frameborder="0"
-      width="100%"
-      height="100%"
-    ></iframe>
+    <div class="about-me-container">
+      <h2 id="about-me-text">
+        Hi there! So you have reached my portfolio, i suppose this is where i
+        tell my story. Once upon a time
+        <button class="continueButton">. . .</button>
+      </h2>
+    </div>
 
-    <div id="avatar">
-      <iframe
-        class="avatar"
-        src="https://my.spline.design/untitled-7892c0cc53e61c9b5d8b9e9874233db2/"
-        frameborder="0"
-        width="100%"
-        height="100%"
-      ></iframe>
+    <div class="appearing-text-container">
+      <h2 id="appearing-text">
+        Just kidding, i woudn't do that to you :D I'm a full stack web developer
+        with a passion for creating unique and interactive experiences. Although
+        I originally came from a medical science background, I made the leap
+        towards coding and found my interest in web development. I enjoy using
+        my skills to bring websites to life and create engaging user
+        experiences. Whether it's front-end design or back-end development, I'm
+        always eager to learn and expand my skill set to stay up-to-date with
+        the latest trends and technologies in the industry. Check out some of my
+        projects!
+      </h2>
     </div>
   </body>
-
   <script src="https://unpkg.com/split-type"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
@@ -67,5 +69,5 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script src="script.js"></script>
+  <script src="/lib/js/aboutMe.js"></script>
 </html>
