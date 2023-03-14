@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap");
 
-
 /* header */
 header {
   display: flex;
@@ -28,8 +27,6 @@ header {
   background-color: rgb(104, 13, 231);
 }
 
-
-
 #nav-links {
   position: fixed;
   top: 0rem;
@@ -51,8 +48,6 @@ header {
   -webkit-clip-path: circle(500px at 90% -10%);
 }
 
-
-
 #nav-links > li {
   display: flex;
   justify-content: center;
@@ -66,7 +61,6 @@ header {
 #nav-links > li:first-child {
   margin-top: 3rem;
 }
-
 
 #nav-links > li > a {
   color: black;
@@ -82,7 +76,6 @@ header {
   height: 10rem;
   width: 2rem;
 }
-
 
 /* body */
 body {
@@ -193,14 +186,14 @@ p {
 
 /* About me Page */
 
-
-
-.about-me-container, .appearing-text-container {
+.about-me-container,
+.appearing-text-container {
   display: flex;
   justify-content: center;
 }
 
-#about-me-text, #appearing-text {
+#about-me-text,
+#appearing-text {
   width: 41rem;
 }
 
@@ -209,7 +202,7 @@ p {
   border: none;
   color: rgb(163, 116, 255);
   padding: 0;
-  margin-left: 1rem ;
+  margin-left: 1rem;
   scale: 2;
   z-index: 3;
   position: relative;
@@ -231,9 +224,7 @@ p {
 
 /* porject page */
 
-
-
- .openChat-container{
+.openChat-container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -251,10 +242,10 @@ p {
 
 .chatBox-text-container {
   display: flex;
-  width: 51rem;
+  width: 61rem;
   justify-content: center;
   z-index: 2;
-  
+  margin-top: 2rem;
 }
 
 .chatBox-text {
@@ -265,4 +256,38 @@ p {
 .chatBoxLink {
   text-decoration: none;
   color: rgb(163, 116, 255);
+}
+
+.whats-for-dinner-container {
+  display: flex;
+  flex-direction: row-reverse
+  
+}
+
+.whats-for-dinner-imgContainer {
+  width: 50%;
+  display: flex;
+    justify-content: flex-start;
+    padding-top: 5rem;
+}
+
+#whats-for-dinner {
+  width: 38rem;
+  z-index: 3;
+  position: relative;
+  border-radius: 20px;
+  z-index: 3;
+
+}
+
+.whats-for-dinner-text-container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  padding-top: 4rem;
+  z-index: 3;
+}
+
+.whats-for-dinner-text {
+  width: 70%;
 }
