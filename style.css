@@ -265,7 +265,7 @@ p {
 }
 
 .whats-for-dinner-imgContainer {
-  width: 50%;
+  width: 60%;
   display: flex;
     justify-content: flex-start;
     padding-top: 5rem;
@@ -276,7 +276,8 @@ p {
   z-index: 3;
   position: relative;
   border-radius: 20px;
-  z-index: 3;
+  height: 80%;
+
 
 }
 
